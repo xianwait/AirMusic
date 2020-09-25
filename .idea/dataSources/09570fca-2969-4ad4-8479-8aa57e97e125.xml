@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.19">
+    <root id="1">
+      <ServerVersion>5.0.37</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="adminsystem"/>
+    <schema id="3" parent="1" name="airmusicdb"/>
+    <schema id="4" parent="1" name="cr_debug"/>
+    <schema id="5" parent="1" name="easyssh"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="jbpm"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <table id="9" parent="3" name="a_audio"/>
+    <table id="10" parent="3" name="a_comment"/>
+    <table id="11" parent="3" name="a_mv"/>
+    <table id="12" parent="3" name="a_mvcomment"/>
+    <table id="13" parent="3" name="a_picture"/>
+    <table id="14" parent="3" name="a_rank"/>
+    <table id="15" parent="3" name="a_record"/>
+    <table id="16" parent="3" name="a_sex"/>
+    <table id="17" parent="3" name="a_singer"/>
+    <table id="18" parent="3" name="a_song"/>
+    <table id="19" parent="3" name="a_songcomment"/>
+    <table id="20" parent="3" name="a_songonetype"/>
+    <table id="21" parent="3" name="a_songset"/>
+    <table id="22" parent="3" name="a_songsetcomment"/>
+    <table id="23" parent="3" name="a_songtwotype"/>
+    <table id="24" parent="3" name="a_user"/>
+    <table id="25" parent="3" name="a_userrelation"/>
+    <table id="26" parent="3" name="a_usertype"/>
+    <table id="27" parent="3" name="a_voice"/>
+    <column id="28" parent="9" name="rId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="29" parent="9" name="rAudioName">
+      <Position>2</Position>
+      <Comment>音频标题</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="30" parent="9" name="rAudio">
+      <Position>3</Position>
+      <Comment>音频文件</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="31" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="10" name="cId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="34" parent="10" name="userId">
+      <Position>2</Position>
+      <Comment>评论用户编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="35" parent="10" name="comment">
+      <Position>3</Position>
+      <Comment>评论内容不能为空</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="36" parent="10" name="likeCount">
+      <Position>4</Position>
+      <Comment>点赞数量不能为空，默认0</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="37" parent="10" name="time">
+      <Position>5</Position>
+      <Comment>评论时间，默认为当前</Comment>
+      <DataType>TIMESTAMP(19)|93s</DataType>
+    </column>
+    <index id="38" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="39" parent="10" name="userId">
+      <ColNames>userId</ColNames>
+    </index>
+    <key id="40" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="11" name="mId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="42" parent="11" name="mName">
+      <Position>2</Position>
+      <Comment>MV名称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="11" name="mSinger">
+      <Position>3</Position>
+      <Comment>歌手，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="44" parent="11" name="picture">
+      <Position>4</Position>
+      <Comment>MV封面，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="45" parent="11" name="mDuration">
+      <Position>5</Position>
+      <Comment>歌曲时长</Comment>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="46" parent="11" name="mMV">
+      <Position>6</Position>
+      <Comment>MV，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="47" parent="11" name="mMP3">
+      <Position>7</Position>
+      <Comment>MP3，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="48" parent="11" name="tTwoTypeId">
+      <Position>8</Position>
+      <Comment>二级类型编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="49" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="50" parent="11" name="mSinger">
+      <ColNames>mSinger</ColNames>
+    </index>
+    <index id="51" parent="11" name="picture">
+      <ColNames>picture</ColNames>
+    </index>
+    <index id="52" parent="11" name="mMV">
+      <ColNames>mMV</ColNames>
+    </index>
+    <index id="53" parent="11" name="mMP3">
+      <ColNames>mMP3</ColNames>
+    </index>
+    <index id="54" parent="11" name="tTwoTypeId">
+      <ColNames>tTwoTypeId</ColNames>
+    </index>
+    <key id="55" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="11" name="a_mv_ibfk_1">
+      <ColNames>mMV</ColNames>
+      <RefTableName>a_voice</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>rId</RefColNames>
+    </foreign-key>
+    <foreign-key id="57" parent="11" name="a_mv_ibfk_2">
+      <ColNames>mMP3</ColNames>
+      <RefTableName>a_song</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>mId</RefColNames>
+    </foreign-key>
+    <column id="58" parent="12" name="cId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="59" parent="12" name="userId">
+      <Position>2</Position>
+      <Comment>评论用户编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="60" parent="12" name="comment">
+      <Position>3</Position>
+      <Comment>评论内容不能为空</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="61" parent="12" name="likeCount">
+      <Position>4</Position>
+      <Comment>点赞数量不能为空，默认0</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="62" parent="12" name="time">
+      <Position>5</Position>
+      <Comment>评论时间，默认为当前</Comment>
+      <DataType>TIMESTAMP(19)|93s</DataType>
+    </column>
+    <column id="63" parent="12" name="mvId">
+      <Position>6</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="64" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="65" parent="12" name="userId">
+      <ColNames>userId</ColNames>
+    </index>
+    <index id="66" parent="12" name="mvId">
+      <ColNames>mvId</ColNames>
+    </index>
+    <key id="67" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="12" name="a_mvcomment_ibfk_1">
+      <ColNames>mvId</ColNames>
+      <RefTableName>a_mv</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>mId</RefColNames>
+    </foreign-key>
+    <column id="69" parent="13" name="pId">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="70" parent="13" name="pictureTitle">
+      <Position>2</Position>
+      <Comment>图片标题</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="71" parent="13" name="picturePath">
+      <Position>3</Position>
+      <Comment>图片路径</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="72" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="73" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="14" name="rId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="75" parent="14" name="rName">
+      <Position>2</Position>
+      <Comment>等级</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="76" parent="14" name="rQuantity">
+      <Position>3</Position>
+      <Comment>听歌等级</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="14" name="rNumber">
+      <Position>4</Position>
+      <Comment>登录天数</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="78" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="79" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="15" name="rId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="81" parent="15" name="uId">
+      <Position>2</Position>
+      <Comment>用户表示，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="82" parent="15" name="rRegister">
+      <Position>3</Position>
+      <Comment>登陆时间</Comment>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="83" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="84" parent="15" name="uId">
+      <ColNames>uId</ColNames>
+    </index>
+    <key id="85" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="86" parent="15" name="a_record_ibfk_1">
+      <ColNames>uId</ColNames>
+      <RefTableName>a_user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uId</RefColNames>
+    </foreign-key>
+    <column id="87" parent="16" name="sId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="88" parent="16" name="sName">
+      <Position>2</Position>
+      <Comment>性别描述</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="89" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="91" parent="17" name="sId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="92" parent="17" name="sSingerName">
+      <Position>2</Position>
+      <Comment>歌手名</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="93" parent="17" name="sSingerSynopsis">
+      <Position>3</Position>
+      <Comment>歌手简介</Comment>
+      <DataType>LONGTEXT(max)|-1s</DataType>
+    </column>
+    <column id="94" parent="17" name="pictureID">
+      <Position>4</Position>
+      <Comment>歌手头像，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="95" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="18" name="mId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="98" parent="18" name="mName">
+      <Position>2</Position>
+      <Comment>歌曲名称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="99" parent="18" name="mSinger">
+      <Position>3</Position>
+      <Comment>歌手，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="100" parent="18" name="mDuration">
+      <Position>4</Position>
+      <Comment>歌曲时长</Comment>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="101" parent="18" name="mLyrics">
+      <Position>5</Position>
+      <Comment>歌词</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="102" parent="18" name="mMV">
+      <Position>6</Position>
+      <Comment>MV，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="103" parent="18" name="mMP3">
+      <Position>7</Position>
+      <Comment>MP3，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="104" parent="18" name="tTwoTypeId">
+      <Position>8</Position>
+      <Comment>二级类型编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="105" parent="18" name="picture">
+      <Position>9</Position>
+      <Comment>音乐图片，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="106" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="107" parent="18" name="mSinger">
+      <ColNames>mSinger</ColNames>
+    </index>
+    <index id="108" parent="18" name="mMV">
+      <ColNames>mMV</ColNames>
+    </index>
+    <index id="109" parent="18" name="mMP3">
+      <ColNames>mMP3</ColNames>
+    </index>
+    <index id="110" parent="18" name="tTwoTypeId">
+      <ColNames>tTwoTypeId</ColNames>
+    </index>
+    <index id="111" parent="18" name="picture">
+      <ColNames>picture</ColNames>
+    </index>
+    <key id="112" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="113" parent="18" name="a_song_ibfk_5">
+      <ColNames>mSinger</ColNames>
+      <RefTableName>a_singer</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>sId</RefColNames>
+    </foreign-key>
+    <foreign-key id="114" parent="18" name="a_song_ibfk_6">
+      <ColNames>mMV</ColNames>
+      <RefTableName>a_mv</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>mId</RefColNames>
+    </foreign-key>
+    <foreign-key id="115" parent="18" name="a_song_ibfk_7">
+      <ColNames>mMP3</ColNames>
+      <RefTableName>a_audio</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>rId</RefColNames>
+    </foreign-key>
+    <foreign-key id="116" parent="18" name="a_song_ibfk_3">
+      <ColNames>tTwoTypeId</ColNames>
+      <RefTableName>a_songtwotype</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>tId</RefColNames>
+    </foreign-key>
+    <column id="117" parent="19" name="cId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="118" parent="19" name="userId">
+      <Position>2</Position>
+      <Comment>评论用户编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="119" parent="19" name="comment">
+      <Position>3</Position>
+      <Comment>评论内容不能为空</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="120" parent="19" name="likeCount">
+      <Position>4</Position>
+      <Comment>点赞数量不能为空，默认0</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="121" parent="19" name="time">
+      <Position>5</Position>
+      <Comment>评论时间，默认为当前</Comment>
+      <DataType>TIMESTAMP(19)|93s</DataType>
+    </column>
+    <column id="122" parent="19" name="songid">
+      <Position>6</Position>
+      <Comment>歌曲id</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="123" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="124" parent="19" name="userId">
+      <ColNames>userId</ColNames>
+    </index>
+    <index id="125" parent="19" name="songid">
+      <ColNames>songid</ColNames>
+    </index>
+    <key id="126" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="127" parent="19" name="a_songcomment_ibfk_1">
+      <ColNames>songid</ColNames>
+      <RefTableName>a_song</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>mId</RefColNames>
+    </foreign-key>
+    <column id="128" parent="20" name="tId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="129" parent="20" name="tTypeName">
+      <Position>2</Position>
+      <Comment>一级类型名称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="130" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="132" parent="21" name="mId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="133" parent="21" name="mName">
+      <Position>2</Position>
+      <Comment>歌曲名称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="134" parent="21" name="mCreateName">
+      <Position>3</Position>
+      <Comment>创始人，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="135" parent="21" name="mPlayCount">
+      <Position>4</Position>
+      <Comment>播放量</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="136" parent="21" name="mEnshrineCount">
+      <Position>5</Position>
+      <Comment>收藏量</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="137" parent="21" name="mSongSetDate">
+      <Position>6</Position>
+      <DataType>TIMESTAMP(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="138" parent="21" name="pictureID">
+      <Position>7</Position>
+      <Comment>图片路径，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="139" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="140" parent="21" name="mCreateName">
+      <ColNames>mCreateName</ColNames>
+    </index>
+    <index id="141" parent="21" name="pictureID">
+      <ColNames>pictureID</ColNames>
+    </index>
+    <key id="142" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="143" parent="21" name="a_songset_ibfk_2">
+      <ColNames>mCreateName</ColNames>
+      <RefTableName>a_user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uId</RefColNames>
+    </foreign-key>
+    <foreign-key id="144" parent="21" name="a_songset_ibfk_3">
+      <ColNames>pictureID</ColNames>
+      <RefTableName>a_picture</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>pId</RefColNames>
+    </foreign-key>
+    <column id="145" parent="22" name="cId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="146" parent="22" name="userId">
+      <Position>2</Position>
+      <Comment>评论用户编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="147" parent="22" name="comment">
+      <Position>3</Position>
+      <Comment>评论内容不能为空</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="148" parent="22" name="likeCount">
+      <Position>4</Position>
+      <Comment>点赞数量不能为空，默认0</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="149" parent="22" name="time">
+      <Position>5</Position>
+      <Comment>评论时间，默认为当前</Comment>
+      <DataType>TIMESTAMP(19)|93s</DataType>
+    </column>
+    <column id="150" parent="22" name="ssId">
+      <Position>6</Position>
+      <Comment>歌单id</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="151" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="152" parent="22" name="userId">
+      <ColNames>userId</ColNames>
+    </index>
+    <index id="153" parent="22" name="ssId">
+      <ColNames>ssId</ColNames>
+    </index>
+    <key id="154" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="155" parent="22" name="a_songsetcomment_ibfk_1">
+      <ColNames>ssId</ColNames>
+      <RefTableName>a_songset</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>mId</RefColNames>
+    </foreign-key>
+    <column id="156" parent="23" name="tId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="157" parent="23" name="tTypeName">
+      <Position>2</Position>
+      <Comment>二级类型名称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="158" parent="23" name="tOneTypeId">
+      <Position>3</Position>
+      <Comment>一级类型编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="159" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="160" parent="23" name="tOneTypeId">
+      <ColNames>tOneTypeId</ColNames>
+    </index>
+    <key id="161" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="162" parent="23" name="a_songtwotype_ibfk_1">
+      <ColNames>tOneTypeId</ColNames>
+      <RefTableName>a_songonetype</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>tId</RefColNames>
+    </foreign-key>
+    <column id="163" parent="24" name="uId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="164" parent="24" name="uName">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="165" parent="24" name="uPwd">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="166" parent="24" name="uNickname">
+      <Position>4</Position>
+      <Comment>昵称</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="167" parent="24" name="uRank">
+      <Position>5</Position>
+      <Comment>等级</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="168" parent="24" name="uMySignature">
+      <Position>6</Position>
+      <Comment>个性签名</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="169" parent="24" name="uUserType">
+      <Position>7</Position>
+      <Comment>用户类型，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="170" parent="24" name="uSex">
+      <Position>8</Position>
+      <Comment>性别</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="171" parent="24" name="uPortrait">
+      <Position>9</Position>
+      <Comment>头像路径，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="172" parent="24" name="uRegion">
+      <Position>10</Position>
+      <Comment>地区</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="173" parent="24" name="uBirthday">
+      <Position>11</Position>
+      <Comment>出生日期</Comment>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="174" parent="24" name="uDatetime">
+      <Position>12</Position>
+      <Comment>注册时间</Comment>
+      <DataType>DATETIME(19)|93s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="175" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="176" parent="24" name="uRank">
+      <ColNames>uRank</ColNames>
+    </index>
+    <index id="177" parent="24" name="uUserType">
+      <ColNames>uUserType</ColNames>
+    </index>
+    <index id="178" parent="24" name="uSex">
+      <ColNames>uSex</ColNames>
+    </index>
+    <index id="179" parent="24" name="uPortrait">
+      <ColNames>uPortrait</ColNames>
+    </index>
+    <key id="180" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="181" parent="24" name="a_user_ibfk_6">
+      <ColNames>uRank</ColNames>
+      <RefTableName>a_rank</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>rId</RefColNames>
+    </foreign-key>
+    <foreign-key id="182" parent="24" name="a_user_ibfk_5">
+      <ColNames>uUserType</ColNames>
+      <RefTableName>a_usertype</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uId</RefColNames>
+    </foreign-key>
+    <foreign-key id="183" parent="24" name="a_user_ibfk_1">
+      <ColNames>uSex</ColNames>
+      <RefTableName>a_sex</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>sId</RefColNames>
+    </foreign-key>
+    <foreign-key id="184" parent="24" name="a_user_ibfk_7">
+      <ColNames>uPortrait</ColNames>
+      <RefTableName>a_picture</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>pId</RefColNames>
+    </foreign-key>
+    <column id="185" parent="25" name="uId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="186" parent="25" name="followerId">
+      <Position>2</Position>
+      <Comment>关注人编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="187" parent="25" name="concernedId">
+      <Position>3</Position>
+      <Comment>关注人编号，外键</Comment>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <index id="188" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="189" parent="25" name="followerId">
+      <ColNames>followerId</ColNames>
+    </index>
+    <index id="190" parent="25" name="concernedId">
+      <ColNames>concernedId</ColNames>
+    </index>
+    <key id="191" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="192" parent="25" name="a_userrelation_ibfk_1">
+      <ColNames>followerId</ColNames>
+      <RefTableName>a_user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uId</RefColNames>
+    </foreign-key>
+    <foreign-key id="193" parent="25" name="a_userrelation_ibfk_2">
+      <ColNames>concernedId</ColNames>
+      <RefTableName>a_user</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>uId</RefColNames>
+    </foreign-key>
+    <column id="194" parent="26" name="uId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="195" parent="26" name="uUserStories">
+      <Position>2</Position>
+      <Comment>用户描述</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="196" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="197" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="198" parent="27" name="rId">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="199" parent="27" name="a_voiceName">
+      <Position>2</Position>
+      <Comment>视频标题</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="200" parent="27" name="rVoice">
+      <Position>3</Position>
+      <Comment>音频文件</Comment>
+      <DataType>VARCHAR(255)|12s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <index id="201" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="202" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>rId</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
