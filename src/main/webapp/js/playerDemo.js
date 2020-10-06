@@ -120,7 +120,7 @@ $(function () {
 	// ======================播放音乐主函数===============================
 
 	// @param: curPlayIndex[,$trs,_that]
-	var playMusic = function () {
+	var playMusic = function (url) {
 		var $trs = null;
 		var _this = null;
 
@@ -141,7 +141,7 @@ $(function () {
 		// 播放按钮变为暂停样式
 		stylePlayBtn($playBtnGroup.find(".play"), "pause");
 		// 获取资源
-		$(media).attr("src", _this.dataset.audio);
+		$(media).attr("src", url);
 		// 进行播放
 		$(media).on("canplay", function () {
 			this.play();
@@ -213,7 +213,12 @@ $(function () {
 
 	// 双击搜索列表tr播放
 	$infoList_search.on("dblclick", "tr", function () {
-		playMusic($infoList_search.find("tr"), this);
+		$('tr').on('dblclick',function(e){
+			//写双击事件要干的事
+			musicURl = $(this).attr("data-audio");
+			alert(musicURl);
+			playMusic(musicURl);
+		});
 	});
 
 

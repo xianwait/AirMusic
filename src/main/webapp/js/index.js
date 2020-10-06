@@ -120,12 +120,16 @@ $(function () {
 
 	// 清空所有本地存储数据
 	sessionStorage.clear();
+
 	// ===========================基础交互样式====================================
 	
 	// tab选项卡切换样式
 	styleActive([$(".R_page .tabbtns"),".label_btn"],"click","active");
 	// list切换样式
 	styleActive([$("#listContainer>.list>.btngroups"),".btn"],"click","active");
+	
+	styleActive([$("#songListList"),".list_create_001"],"click","drawing");
+
 	// tr切换样式
 	styleActive([$(".infolist"),"tr"],"click","active");
 

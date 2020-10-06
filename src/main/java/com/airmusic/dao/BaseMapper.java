@@ -8,7 +8,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.Reader;
 
-/*使用前用到最下方修改对应接口类并取消注释*/
 
 //mybatis操作类
 public class BaseMapper {
@@ -26,7 +25,10 @@ public class BaseMapper {
     }
 
     /*使用SqlSession提交事务*/
-    public static synchronized void commit(){ getSession().commit(); }
+    public static synchronized void commit(){
+        getSession().commit();
+        System.out.println("进入提交了");
+    }
 
     /*使用SqlSession回滚事务*/
     public static synchronized void rollback(){
@@ -44,9 +46,9 @@ public class BaseMapper {
     }
 
     /*获取Mapper代理接口对象*/
-//    public static DemoMapper getMapperAgency() {
-//        session = getSqlSessionFactory().openSession();
-//       return session.getMapper(DemoMapper.class); //根据业务接口动态修改
-//    }
+    public static UserMapper getMapperAgency() {
+        session = getSqlSessionFactory().openSession();
+        return session.getMapper(UserMapper.class); //根据业务接口动态修改
+    }
 
 }

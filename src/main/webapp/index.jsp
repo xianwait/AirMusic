@@ -10,11 +10,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>云音乐</title>
+	<link rel="stylesheet" href="css/registrationPage.css" />
     <link rel="icon" type="image/ico" href="images/format.ico"/>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" src="libs/jquery-3.1.1.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/ykindex.css"/>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 
 <body onselectstart="return false">
@@ -41,22 +50,55 @@
                 <p class="btn me_fm"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;&nbsp;我的电台</p>
             </div>
         </div>
-        <div class="list list_create">
+        <div class="list list_create" >
             <p class="title">创建的歌单
+			
                 <span class="title_btngroups">
-						<a href="javascript:void(0);" class="btn addlist" id="addList"><i class="fa fa-plus-circle"
-                                                                                          aria-hidden="true"></i></a>
-						<a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down"
-                                                                                aria-hidden="true"></i></a>
-					</span>
+					<a href="javascript:void(0);" class="btn "><i id="addimg" class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </span>
             </p>
-            <div class="btngroups">
+            <div class="btngroups" id="songListList">
                 <p class="btn list_create_like active" id="list_create_like"><i class="fa fa-heart-o"
                                                                                 aria-hidden="true"></i>&nbsp;&nbsp;我喜欢的音乐
                 </p>
-                <p class="btn list_create_001"><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单02</p>
-            </div>
+                <p class="btn list_create_001 drawing" ><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单02</p>
+				<p class="btn list_create_001 drawing" ><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单03</p>
+			</div>
         </div>
+		<!--自定义右键菜单-->
+				<div id="menu" class="skin">
+					<ul class="list-group">
+				 
+					   <li class="list-group-item" id="play"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;播放(Enter)</li>
+				 
+					   <li class="list-group-item" id="compile"><i class="fa fa-pencil-square-o">&nbsp;&nbsp;</i>编辑</li>
+				 
+					    <li class="list-group-item" id="delete"><i class='fa fa-trash'></i>&nbsp;&nbsp;<span>删除歌单(DELETE)</span></li>
+				 </ul>
+				</div>
+
+					​
+		<div class="addList">
+			<table border="0">
+				<div>
+					<tr  id="titleSongtr">
+						<th colspan="2" style="font-size: 20px";><span id="titleSong">新建歌单</span></th>
+					</tr>
+				</div>
+				<div >
+					<tr id="songListValue">
+						<td colspan="2"><input type="text" class="form-control" id="usr" placeholder="请输入新歌单标题"/></td>
+					</tr>
+				</div>
+				<div >
+					<tr id="songListBtn">
+						<td><button type="button" id="addSongListbtn" class="btn btn-info">创建歌单</button></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="addSongListCancel" type="button" class="btn btn-light">取消</button></td>
+					</tr>
+				</div>
+				
+			</table>
+		</div>
         <div class="list list_collect">
             <p class="title">收藏的歌单
                 <span class="title_btngroups">
@@ -84,6 +126,43 @@
         </div>
     </div>
 </div>
+
+<!-- 登录注册页面 -->
+<div class="back">
+		<form action="" class="register">
+			<a href="#" class="fanghui">返回登录</a>
+			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<p class="information">
+				<table>
+					<tr>
+						<td><input type="text" class="user" required placeholder="请输入你的用户名"></td>
+					</tr>
+					<tr>
+						<td><input type="text" class="password" required placeholder="请输入你的密码"></td>
+					</tr>
+				</table>
+				<p><input type="submit" value="注册"></p>
+			</p>
+		</form>
+		<form action="" class="denlu">
+			<br/><br/><br/><br/><br/><br/><br/><br/>
+			<p class="information">
+				<table>
+					<tr>
+						<td><input type="text" class="user" required placeholder="请输入你的用户名"></td>
+					</tr>
+					<tr>
+						<td><input type="text" class="password" required placeholder="请输入你的密码"></td>
+					</tr>
+				</table>
+				<p><input type="submit" value="登录"></p>
+				<a href="#" class="zhuche">注册</a>
+			</p>
+		</form>
+		<br/><br/><br/><br/>
+		<p class="chk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" class="checkbox">同意相关《契约》</p>
+	</div>
 <!-- page_menu 页面顶部菜单 -->
 <div class="page_menu clearfix">
     <div class="menu_logo"><img src="images/netease-logo.png" alt=""></div>
@@ -249,7 +328,7 @@
                                     <span class="btn">
 											<a href="javascript:void(0);" class="btn_report">举报</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_support"><i
-                                                    class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                                  class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_share">分享</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_reply">回复</a>
 										</span>
@@ -413,7 +492,7 @@
     </div>
 </div>
 <!-- audio -->
-<audio id="audio">您的该版本浏览器不支持AUDIO标签！！！</audio>
+<audio id="audio" src="http://m7.music.126.net/20200929114722/ec854ba7a4e887e633739d1feb49eeb9/ymusic/3cae/2d94/5d00/1595b4e7846a1631374ff848dba82bc3.mp3">您的该版本浏览器不支持AUDIO标签！！！</audio>
 <!-- backscreen -->
 <div class="g_backscreen" id="backScreen"></div>
 <!-- tips box -->
@@ -435,7 +514,8 @@
 <!-- scripts -->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/lyricScroll.js"></script>
-<script type="text/javascript" src="js/request.js"></script>
-<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/wqxRequest.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="js/ykindex.js"></script>
 </body>
 </html>

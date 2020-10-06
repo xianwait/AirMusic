@@ -1,0 +1,98 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.addList {
+	display: none;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 572px;
+	left: 238px;
+	z-index: 2;
+	background: #FFFFFF;
+	box-shadow: 1px 1px 1px 1px #909090;
+	border-radius: 5px;
+}
+
+#titleSong {
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	top: 30px;
+	left: 30px;
+}
+
+#songListValue #usr {
+	width: 317px;
+	position: absolute;
+	top: 76px;
+	left: 30px;
+}
+
+#songListBtn .btn-info {
+	position: absolute;
+	left: 30px;
+	top: 138px;
+
+}
+
+#songListBtn .btn-light {
+	width: 102px;
+	position: absolute;
+	left: 207px;
+	top: 138px;
+}
+
+.list_create_001 {
+	position: relative;
+}
+
+.list_create_001 .fa-trash {
+	position: absolute;
+	right: 20px;
+	top: 2px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#menu ul {
+	position: absolute;
+	float: left;
+	border: 1px solid #979797;
+	background: #f1f1f1;
+	padding: 2px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+	width: 310px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+#menu ul li {
+	float: left;
+	clear: both;
+	height: 42px;
+	cursor: pointer;
+	line-height: 24px;
+	white-space: nowrap;
+	padding: 0 30px;
+	width: 100%;
+	display: inline-block;
+	font-size: 19px;
+	padding-top: 8px;
+}
+
+#menu ul li:hover {
+	background: #E6EDF6;
+	border: 1px solid #B4D2F6;
+}
+
+.skin {
+	width: 100px;
+	padding: 2px;
+	visibility: hidden;
+	position: absolute;
+}
