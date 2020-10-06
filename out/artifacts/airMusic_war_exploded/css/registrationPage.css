@@ -1,0 +1,70 @@
+.back{
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	background: url(../images/6E-JGD.jpg);
+	background-size: 1000px;
+	width:350px;
+	height: 530px;
+	display: none;
+	z-index: 2;
+}
+
+   .information{
+	width: 250px;
+	margin-left: 50px;
+	}
+	
+.user{
+	border-radius:8px 8px 0px 0px;
+	height: 40px;
+	width: 240px;
+	background: url(../images/QQ图片202009290916521.jpg)no-repeat;
+	background-position: -40px -15px;
+	background-color: F0FFFF;
+	padding-left: 45px;
+}
+
+.password{
+	margin-top: -5px;
+	border-radius:0px 0px 8px 8px;
+	height: 40px;
+	width: 240px;
+	background: url(../images/密%20码.png)no-repeat;
+	background-size: 35px;
+	background-position: 3px 0px;
+	background-color: F0FFFF;
+	padding-left: 45px;
+}
+
+input[type='text']{
+	border-color: darkgray;
+}
+
+.fanghui{
+	text-decoration:none;
+}
+
+.zhuche{
+	margin-left: 150px;
+}
+
+input[type='submit']{
+	border-radius: 8px;
+	margin-left: 50px;
+	height: 40px;
+	width: 240px;
+	background-color: red;
+	border-color: red;
+	font-size:20px;
+	color: aliceblue;
+}
+
+.td3{
+	font-size: 10px;
+}
+
+.tishi{
+	font-size: 10px;
+	color: red;
+}
