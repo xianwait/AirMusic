@@ -9,21 +9,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>云音乐</title>
-	<link rel="stylesheet" href="css/registrationPage.css" />
-    <link rel="icon" type="image/ico" href="images/format.ico"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+    <meta charset="UTF-8" />
+    <title>网易云音乐</title>
+    <link rel="icon" type="image/ico" href="images/format.ico" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="libs/jquery-3.1.1.min.js"></script>
-	
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/ykindex.css"/>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 
 <body onselectstart="return false">
@@ -50,60 +42,23 @@
                 <p class="btn me_fm"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;&nbsp;我的电台</p>
             </div>
         </div>
-        <div class="list list_create" >
+        <div class="list list_create">
             <p class="title">创建的歌单
-			
                 <span class="title_btngroups">
-					<a href="javascript:void(0);" class="btn "><i id="addimg" class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                    <a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                </span>
+						<a href="javascript:void(0);" class="btn addlist" id="addList"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+						<a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+					</span>
             </p>
-            <div class="btngroups" id="songListList">
-                <p class="btn list_create_like active" id="list_create_like"><i class="fa fa-heart-o"
-                                                                                aria-hidden="true"></i>&nbsp;&nbsp;我喜欢的音乐
-                </p>
-                <p class="btn list_create_001 drawing" ><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单02</p>
-				<p class="btn list_create_001 drawing" ><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单03</p>
-			</div>
+            <div class="btngroups">
+                <p class="btn list_create_like active" id="list_create_like"><i class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;&nbsp;我喜欢的音乐</p>
+                <p class="btn list_create_001"><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;我的歌单02</p>
+            </div>
         </div>
-		<!--自定义右键菜单-->
-				<div id="menu" class="skin">
-					<ul class="list-group">
-				 
-					   <li class="list-group-item" id="play"><i class="fa fa-play-circle-o"></i>&nbsp;&nbsp;播放(Enter)</li>
-				 
-					   <li class="list-group-item" id="compile"><i class="fa fa-pencil-square-o">&nbsp;&nbsp;</i>编辑</li>
-				 
-					    <li class="list-group-item" id="delete"><i class='fa fa-trash'></i>&nbsp;&nbsp;<span>删除歌单(DELETE)</span></li>
-				 </ul>
-				</div>
-
-					​
-		<div class="addList">
-			<table border="0">
-				<div>
-					<tr  id="titleSongtr">
-						<th colspan="2" style="font-size: 20px";><span id="titleSong">新建歌单</span></th>
-					</tr>
-				</div>
-				<div >
-					<tr id="songListValue">
-						<td colspan="2"><input type="text" class="form-control" id="usr" placeholder="请输入新歌单标题"/></td>
-					</tr>
-				</div>
-				<div >
-					<tr id="songListBtn">
-						<td><button type="button" id="addSongListbtn" class="btn btn-info">创建歌单</button></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="addSongListCancel" type="button" class="btn btn-light">取消</button></td>
-					</tr>
-				</div>
-				
-			</table>
-		</div>
         <div class="list list_collect">
             <p class="title">收藏的歌单
                 <span class="title_btngroups">
-          <a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-        </span>
+						<a href="javascript:void(0);" class="btn unfoldlist"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+					</span>
             </p>
             <div class="btngroups">
                 <p class="btn list_collect_id001"><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;当年烂大街的舞曲</p>
@@ -113,7 +68,7 @@
     <!-- 全屏小窗 -->
     <div class="playlist_smallwindow clearfix">
         <div class="poster" id="btnExpandPlayBox">
-            <img src="images/temp_pic001.jpg" alt="" id="smallwindow_albumPic"/>
+            <img src="images/temp_pic001.jpg" alt="" id="smallwindow_albumPic" />
             <div class="poster_hoverback"><i class="fa fa-expand" aria-hidden="true"></i></div>
         </div>
         <div class="info">
@@ -126,43 +81,6 @@
         </div>
     </div>
 </div>
-
-<!-- 登录注册页面 -->
-<div class="back">
-		<form action="" class="register">
-			<a href="#" class="fanghui">返回登录</a>
-			<br/><br/><br/><br/><br/><br/><br/><br/>
-			<p class="information">
-				<table>
-					<tr>
-						<td><input type="text" class="user" required placeholder="请输入你的用户名"></td>
-					</tr>
-					<tr>
-						<td><input type="text" class="password" required placeholder="请输入你的密码"></td>
-					</tr>
-				</table>
-				<p><input type="submit" value="注册"></p>
-			</p>
-		</form>
-		<form action="" class="denlu">
-			<br/><br/><br/><br/><br/><br/><br/><br/>
-			<p class="information">
-				<table>
-					<tr>
-						<td><input type="text" class="user" required placeholder="请输入你的用户名"></td>
-					</tr>
-					<tr>
-						<td><input type="text" class="password" required placeholder="请输入你的密码"></td>
-					</tr>
-				</table>
-				<p><input type="submit" value="登录"></p>
-				<a href="#" class="zhuche">注册</a>
-			</p>
-		</form>
-		<br/><br/><br/><br/>
-		<p class="chk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="checkbox" class="checkbox">同意相关《契约》</p>
-	</div>
 <!-- page_menu 页面顶部菜单 -->
 <div class="page_menu clearfix">
     <div class="menu_logo"><img src="images/netease-logo.png" alt=""></div>
@@ -172,7 +90,7 @@
         --><a href="javascript:void(0);" class="btn forward"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
     </div>
     <div class="menu_search">
-        <input type="text" placeholder="探索音乐、歌手、歌词、用户" autofocus="" id="inpSearch" class="search_inp"/>
+        <input type="text" placeholder="探索音乐、歌手、歌词、用户" autofocus="" id="inpSearch" class="search_inp" />
         <span class="search_btn" id="top_searchBtn"><i class="fa fa-search" aria-hidden="true"></i></span>
     </div>
 </div>
@@ -215,36 +133,30 @@
         <div class="listcontainer">
             <div class="listinfo clearfix">
                 <div class="info_listpic">
-                    <img src="images/temp_pic001.jpg" alt="" id="playlist_listPic"/>
+                    <img src="images/temp_pic001.jpg" alt="" id="playlist_listPic" />
                 </div>
                 <div class="info_detailtext">
                     <div class="playinfo">
-                        <span><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;<span
-                                id="playlist_trackCount">0</span></span>
-                        <span><i class="fa fa-play-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;<span
-                                id="playlist_playCount">0</span></span>
+                        <span><i class="fa fa-music" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_trackCount">0</span></span>
+                        <span><i class="fa fa-play-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;<span id="playlist_playCount">0</span></span>
                     </div>
                     <div class="detail_name">
                         <span class="listtag">歌单</span>
                         <span class="listname" id="playlist_listName">歌单名称</span>
                     </div>
                     <div class="detail_time">
-                        <span class="userpic"><a href="javascript:void(0);"><img src="images/user_face.png" alt=""
-                                                                                 id="playlist_userFace"/></a></span>
+                        <span class="userpic"><a href="javascript:void(0);"><img src="images/user_face.png" alt="" id="playlist_userFace" /></a></span>
                         <span class="username"><a href="javascript:void(0);" id="playlist_userName">user008</a></span>
                         <span class="createtime" id="playlist_createTime">1970-01-01</span>
                         <span>创建</span>
                     </div>
                     <div class="detail_btns">
-                        <span class="btn playall"><i class="fa fa-play-circle-o" aria-hidden="true"
-                                                     style="color:#c52f30;"></i>&nbsp;&nbsp;播放全部</span>
+                        <span class="btn playall"><i class="fa fa-play-circle-o" aria-hidden="true" style="color:#c52f30;"></i>&nbsp;&nbsp;播放全部</span>
                         <!--
                         --><span class="btn plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                        <span class="btn playall"><i class="fa fa-folder"
-                                                     aria-hidden="true"></i>&nbsp;&nbsp;收藏(0)</span>
+                        <span class="btn playall"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;收藏(0)</span>
                         <span class="btn playall"><i class="fa fa-share-square-o" aria-hidden="true"></i>&nbsp;&nbsp;分享(0)</span>
-                        <span class="btn playall"><i class="fa fa-download"
-                                                     aria-hidden="true"></i>&nbsp;&nbsp;下载全部</span>
+                        <span class="btn playall"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;下载全部</span>
                     </div>
                 </div>
             </div>
@@ -254,12 +166,12 @@
                     <label class="label_btn" for="comment">评论(0)</label>
                     <label class="label_btn" for="follower">收藏者</label>
                     <span class="menu_search">
-							<input type="text" placeholder="搜索歌单音乐" class="search_inp"/>
+							<input type="text" placeholder="搜索歌单音乐" class="search_inp" />
 							<span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span>
 						</span>
                 </div>
                 <!-- musiclist -->
-                <input type="radio" id="music" name="tablist" checked=""/>
+                <input type="radio" id="music" name="tablist" checked="" />
                 <div class="tabitem musiclist">
                     <table>
                         <thead>
@@ -288,7 +200,7 @@
                     </table>
                 </div>
                 <!-- comments -->
-                <input type="radio" id="comment" name="tablist"/>
+                <input type="radio" id="comment" name="tablist" />
                 <div class="tabitem commentlist">
                     <div class="commentbox clearfix">
                         <textarea name="" id="" cols="30" rows="10" maxlength="140"></textarea>
@@ -301,40 +213,33 @@
                         <div class="comment new">
                             <div class="title">最新评论(0)</div>
                             <div class="content">
-                                <p><span class="username"><a href="javascript:void(0);">用户008</a></span>：<span
-                                        class="usersay">Lorem ipsum
+                                <p><span class="username"><a href="javascript:void(0);">用户008</a></span>：<span class="usersay">Lorem ipsum
 											dolor sit amet, consectetur adipisicing elit. Laborum, earum cupiditate facere suscipit tenetur quia ab
-											quasi ea eligendi, neque esse quidem. Eius, quasi! Odit veniam repellat amet, accusamus voluptatem.</span>
-                                </p>
+											quasi ea eligendi, neque esse quidem. Eius, quasi! Odit veniam repellat amet, accusamus voluptatem.</span></p>
                                 <div class="btngroups clearfix">
                                     <span class="time">2016年12月31日 10:35:06</span>
                                     <span class="btn">
 											<a href="javascript:void(0);" class="btn_report">举报</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-											<a href="javascript:void(0);" class="btn_support"><i
-                                                    class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_support"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_share">分享</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_reply">回复</a>
 										</span>
                                 </div>
-                                <div class="userface"><a href="javascript:void(0);"><img src="images/user_face.png"
-                                                                                         alt=""/></a></div>
+                                <div class="userface"><a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" /></a></div>
                             </div>
                             <div class="content">
-                                <p><span class="username"><a href="javascript:void(0);">用户008</a></span>：<span
-                                        class="usersay">Lorem ipsum
+                                <p><span class="username"><a href="javascript:void(0);">用户008</a></span>：<span class="usersay">Lorem ipsum
 											dolor sit amet, consectetur adipisicing elit.</span></p>
                                 <div class="btngroups clearfix">
                                     <span class="time">2016年12月31日 10:35:06</span>
                                     <span class="btn">
 											<a href="javascript:void(0);" class="btn_report">举报</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-											<a href="javascript:void(0);" class="btn_support"><i
-                                                  class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+											<a href="javascript:void(0);" class="btn_support"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>(0)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_share">分享</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 											<a href="javascript:void(0);" class="btn_reply">回复</a>
 										</span>
                                 </div>
-                                <div class="userface"><a href="javascript:void(0);"><img src="images/user_face.png"
-                                                                                         alt=""/></a></div>
+                                <div class="userface"><a href="javascript:void(0);"><img src="images/user_face.png" alt="" /></a></div>
                             </div>
                         </div>
                         <div class="comment prefect">
@@ -346,18 +251,18 @@
                     </div>
                 </div>
                 <!-- followers -->
-                <input type="radio" id="follower" name="tablist"/>
+                <input type="radio" id="follower" name="tablist" />
                 <div class="tabitem followerlist">
                     <figure>
-                        <a href="javascript:void(0);"><img src="images/user_face.png" alt=""/></a>
+                        <a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" /></a>
                         <figcaption><a href="javascript:void(0);">-USERNAME-</a></figcaption>
                     </figure>
                     <figure>
-                        <a href="javascript:void(0);"><img src="images/user_face.png" alt=""/></a>
+                        <a href="javascript:void(0);"><img src="images/user_face.png" alt="" /></a>
                         <figcaption><a href="javascript:void(0);">-USERNAME-</a></figcaption>
                     </figure>
                     <figure>
-                        <a href="javascript:void(0);"><img src="images/user_face.png" alt=""/></a>
+                        <a href="javascript:void(0);"><img src="images/user_face.png" alt="" /></a>
                         <figcaption><a href="javascript:void(0);">-USERNAME-</a></figcaption>
                     </figure>
                 </div>
@@ -383,7 +288,7 @@
                     <label class="label_btn" for="user">用户</label>
                 </div>
                 <!-- song -->
-                <input type="radio" id="song" name="tablist_s" checked=""/>
+                <input type="radio" id="song" name="tablist_s" checked="" />
                 <div class="tabitem musiclist">
                     <table>
                         <thead>
@@ -412,37 +317,37 @@
                     </table>
                 </div>
                 <!-- singer -->
-                <input type="radio" id="singer" name="tablist_s"/>
+                <input type="radio" id="singer" name="tablist_s" />
                 <div class="tabitem singerlist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- album -->
-                <input type="radio" id="album" name="tablist_s"/>
+                <input type="radio" id="album" name="tablist_s" />
                 <div class="tabitem albumlist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- musicvideo -->
-                <input type="radio" id="musicvideo" name="tablist_s"/>
+                <input type="radio" id="musicvideo" name="tablist_s" />
                 <div class="tabitem musicvideolist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- playlist -->
-                <input type="radio" id="playlist" name="tablist_s"/>
+                <input type="radio" id="playlist" name="tablist_s" />
                 <div class="tabitem playlist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- songlrc -->
-                <input type="radio" id="songlrc" name="tablist_s"/>
+                <input type="radio" id="songlrc" name="tablist_s" />
                 <div class="tabitem songlrclist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- fm -->
-                <input type="radio" id="fm" name="tablist_s"/>
+                <input type="radio" id="fm" name="tablist_s" />
                 <div class="tabitem fmlist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
                 <!-- user -->
-                <input type="radio" id="user" name="tablist_s"/>
+                <input type="radio" id="user" name="tablist_s" />
                 <div class="tabitem userlist">
                     <p style="margin:100px 0;text-align:center;color:#bbb;font-size:1rem;">--分类功能暂未上线--</p>
                 </div>
@@ -453,7 +358,7 @@
 <!-- page_lyric 歌曲详情页 -->
 <div class="page_songdetail" id="pageSongDetail">
     <!-- 模糊背景 -->
-    <div class="g_blurbg" id="bgBlur" style="background-image:url('/images/al8.png');"></div>
+    <div class="g_blurbg" id="bgBlur" style="background-image:url('images/al8.png');"></div>
     <div class="maincontainer clearfix">
         <div class="compressbtn" id="btnCompressPlayBox" title="收起音乐详情页">
             <i class="fa fa-compress" aria-hidden="true"></i>
@@ -472,12 +377,11 @@
         </div>
         <div class="lyricsection">
             <div class="lrcinfo" id="songDetail">
-                <p class="info_song"><span class="songname">--SONGNAME--</span><span class="label mv">MV</span><span
-                        class="label quality">320k</span></p>
+                <p class="info_song"><span class="songname">--SONGNAME--</span><span class="label mv">MV</span><span class="label quality">320k</span></p>
                 <p class="info_album">
-						<span class="album">专辑：<span class="albumname">--ALBUMNAME--</span>
+						<span class="album">歌手：<span class="albumname">--ALBUMNAME--</span>
 						</span>
-                    <span class="singer">歌手：<span class="singersname">--ALBUMNAME--</span>
+                    <span class="singer">专辑：<span class="singersname">--ALBUMNAME--</span>
 						</span>
                     <span class="origin">来源：<span class="originname">--ORIGIN--</span>
 						</span>
@@ -492,13 +396,12 @@
     </div>
 </div>
 <!-- audio -->
-<audio id="audio" src="http://m7.music.126.net/20200929114722/ec854ba7a4e887e633739d1feb49eeb9/ymusic/3cae/2d94/5d00/1595b4e7846a1631374ff848dba82bc3.mp3">您的该版本浏览器不支持AUDIO标签！！！</audio>
+<audio id="audio">您的该版本浏览器不支持AUDIO标签！！！</audio>
 <!-- backscreen -->
 <div class="g_backscreen" id="backScreen"></div>
 <!-- tips box -->
 <div class="g_tipsbox" id="tipsBox">
-    <p class="tip tip_error show"><i class="fa fa-times-circle" aria-hidden="true"></i>&nbsp;&nbsp;<span
-            class="tiptext">ERROR
+    <p class="tip tip_error show"><i class="fa fa-times-circle" aria-hidden="true"></i>&nbsp;&nbsp;<span class="tiptext">ERROR
 				STRING</span></p>
     <p class="tip tip_info"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;<span class="tiptext">INFO
 				STRING</span></p>
@@ -511,11 +414,12 @@
     <span class="loading_text">
 			<!-- Loading... --></span>
 </div>
+
+</body>
+
+</html>
 <!-- scripts -->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/lyricScroll.js"></script>
-<script type="text/javascript" src="js/wqxRequest.js"></script>
-<script type="text/javascript" src="js/register.js"></script>
-<script type="text/javascript" src="js/ykindex.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="js/request.js"></script>
+<script type="text/javascript" src="js/player.js"></script>

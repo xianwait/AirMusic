@@ -16,24 +16,20 @@
 	}
 	
 .user{
-	border-radius:8px 8px 0px 0px;
+	border-radius:8px 8px 0 0;
 	height: 40px;
 	width: 240px;
-	background: url(../images/QQ图片202009290916521.jpg)no-repeat;
-	background-position: -40px -15px;
-	background-color: F0FFFF;
+	background: #F0FFFF url(../images/QQ图片202009290916521.jpg) no-repeat -40px -15px;
 	padding-left: 45px;
 }
 
 .password{
 	margin-top: -5px;
-	border-radius:0px 0px 8px 8px;
+	border-radius:0 0 8px 8px;
 	height: 40px;
 	width: 240px;
-	background: url(../images/密%20码.png)no-repeat;
 	background-size: 35px;
-	background-position: 3px 0px;
-	background-color: F0FFFF;
+	background: #F0FFFF url(../images/密码.png) no-repeat 3px 0;
 	padding-left: 45px;
 }
 

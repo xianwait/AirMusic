@@ -1,0 +1,14 @@
+{
+  "name": "AirMusic",
+  "version": "1.0.0",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "axios": "^0.20.0",
+    "mime-types": "^2.1.27",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.6"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.20"
+  }
+}

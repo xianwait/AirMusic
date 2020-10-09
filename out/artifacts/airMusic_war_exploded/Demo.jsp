@@ -35,7 +35,7 @@
         return `http://music.163.com/song/media/outer/url?id=${id}`;
     }
 
-    let url = 'http://localhost:3000';
+
     $(function () {
         var musicURl;
         $('#btn').click(function () {

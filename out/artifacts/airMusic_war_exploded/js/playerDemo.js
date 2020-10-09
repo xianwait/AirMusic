@@ -156,15 +156,15 @@ $(function () {
 		// 刷新小窗歌曲信息
 		//$smallwindow_albumPic.attr("src", _this.dataset.albumPic);
 		// 刷新小窗专辑封面
-		//$smallwindow_songName.html(_this.dataset.songName);
-		//$smallwindow_singerName.html(_this.dataset.singerName);
+		$smallwindow_songName.html(_this.dataset.songName);
+		$smallwindow_singerName.html(_this.dataset.singerName);
 		// 储存当前歌曲必要信息
-		// sessionStorage.setItem("curPlayInfo_songID", _this.dataset.id);
-		// sessionStorage.setItem("curPlayInfo_songName", _this.dataset.songName);
-		// sessionStorage.setItem("curPlayInfo_singersName", _this.dataset.singerName);
-		// sessionStorage.setItem("curPlayInfo_albumName", _this.dataset.albumName);
-		// sessionStorage.setItem("curPlayInfo_albumPic", _this.dataset.albumPic);
-		// sessionStorage.setItem("curPlayInfo_audioSrc", _this.dataset.audio);
+		sessionStorage.setItem("curPlayInfo_songID", _this.dataset.id);
+		sessionStorage.setItem("curPlayInfo_songName", _this.dataset.songName);
+		sessionStorage.setItem("curPlayInfo_singersName", _this.dataset.singerName);
+		sessionStorage.setItem("curPlayInfo_albumName", _this.dataset.albumName);
+		sessionStorage.setItem("curPlayInfo_albumPic", _this.dataset.albumPic);
+		sessionStorage.setItem("curPlayInfo_audioSrc", _this.dataset.audio);
 
 		// 刷新歌曲详情页bg和poster
 		$bgBlur.css({

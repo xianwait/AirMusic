@@ -127,9 +127,6 @@ $(function () {
 	styleActive([$(".R_page .tabbtns"),".label_btn"],"click","active");
 	// list切换样式
 	styleActive([$("#listContainer>.list>.btngroups"),".btn"],"click","active");
-	
-	styleActive([$("#songListList"),".list_create_001"],"click","drawing");
-
 	// tr切换样式
 	styleActive([$(".infolist"),"tr"],"click","active");
 

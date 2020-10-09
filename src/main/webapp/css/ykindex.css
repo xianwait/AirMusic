@@ -1,6 +1,6 @@
 *{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 .addList {
@@ -78,11 +78,10 @@ ul {
 	cursor: pointer;
 	line-height: 24px;
 	white-space: nowrap;
-	padding: 0 30px;
 	width: 100%;
 	display: inline-block;
 	font-size: 19px;
-	padding-top: 8px;
+	padding: 8px 30px 0;
 }
 
 #menu ul li:hover {

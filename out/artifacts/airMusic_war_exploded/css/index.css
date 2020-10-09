@@ -6,12 +6,12 @@ html{/*font-size:62.5%;*/font-size:20px; /* rem 20>12 20>16 20=10*n */}
 body{
 	min-width:1024px;
 	font-size:0.7rem;
-	font-family:"Microsoft YaHei";
+	font-family: "Microsoft YaHei", serif;
 	background-color:#fafafa;
 	position:relative;
 	-moz-user-select:none; /* 禁止选中文字 */ 
 }
-img{display:block;border-width:0px;}
+img{display:block;border-width:0;}
 a{text-decoration:none;color:#656567;}
 a:hover{color:#111;}
 table,td,th{
