@@ -117,10 +117,8 @@ var formatDate=function (timestamp) {
 $(function () {
 
 	// =========================初始化=====================================
-
 	// 清空所有本地存储数据
 	sessionStorage.clear();
-
 	// ===========================基础交互样式====================================
 	
 	// tab选项卡切换样式
@@ -129,7 +127,6 @@ $(function () {
 	styleActive([$("#listContainer>.list>.btngroups"),".btn"],"click","active");
 	// tr切换样式
 	styleActive([$(".infolist"),"tr"],"click","active");
-
 	// 收起 | 展开 歌单列表
 	$("#listContainer>.list>.title .unfoldlist").on("click",function () {
 		var $btnGroups=$(this).parents(".list").find(".btngroups");
@@ -141,7 +138,11 @@ $(function () {
 			$(this).html('<i class="fa fa-angle-down" aria-hidden="true"></i>');
 		}
 	});
-
+	$("#nickname").hover(function () {
+		$(this).css("color","#FAF5F5");
+	},function () {
+		$(this).css("color","#ded8d8");
+	});
 
 
 	// ==========================EXPORT============================

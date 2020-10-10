@@ -9,12 +9,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8" />
     <title>网易云音乐</title>
-    <link rel="icon" type="image/ico" href="images/format.ico" />
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/registrationPage.css">
+    <link rel="icon" type="image/ico" href="images/format.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <script type="text/javascript" src="libs/jquery-3.1.1.min.js"></script>
 </head>
 
@@ -83,7 +83,7 @@
 </div>
 <!-- page_menu 页面顶部菜单 -->
 <div class="page_menu clearfix">
-    <div class="menu_logo"><img src="images/netease-logo.png" alt=""></div>
+    <div class="menu_logo"><img src="images/网易云音乐-01.png" alt="网易云"></div>
     <div class="menu_btngroups">
         <a href="javascript:void(0);" class="btn backward"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
         <!--
@@ -92,6 +92,9 @@
     <div class="menu_search">
         <input type="text" placeholder="探索音乐、歌手、歌词、用户" autofocus="" id="inpSearch" class="search_inp" />
         <span class="search_btn" id="top_searchBtn"><i class="fa fa-search" aria-hidden="true"></i></span>
+    </div>
+    <div id="menu_setdiv">
+        <span class="menu_set"><img id="user_avatar" src="images/用户.png" width="32" height="32" style="border-radius: 50%" alt="用户头像"><label id="nickname" data_uID="">未登录 <i class="fa fa-caret-down"  style="color: white"></i></label></span>
     </div>
 </div>
 <!-- page_playerbar 页面底部播放控制条 -->
@@ -254,7 +257,7 @@
                 <input type="radio" id="follower" name="tablist" />
                 <div class="tabitem followerlist">
                     <figure>
-                        <a href="javascript:void(0);"><img src="./src/images/user_face.png" alt="" /></a>
+                        <a href="javascript:void(0);"><img src="images/user_face.png" alt="" /></a>
                         <figcaption><a href="javascript:void(0);">-USERNAME-</a></figcaption>
                     </figure>
                     <figure>
@@ -269,6 +272,33 @@
             </div>
         </div>
     </div>
+</div>
+<!-- 登录页 -->
+<div class="back" style="display: none">
+    <div>
+        <a href="#" class="fanghui" id="esc">返回登录</a>
+        <a href="#"><i class="fa fa-close log_close" style="font-size: 20px"></i></a>
+    </div>
+    <img src="images/网易云音乐-01.png">
+   <div>
+           <p class="information">
+           <table>
+               <tr>
+                   <td><input type="text" class="user" required placeholder="请输入你的手机号"></td>
+               </tr>
+               <tr>
+                   <td><input type="password" class="password" required placeholder="请输入你的密码"></td>
+               </tr>
+           </table>
+           <input id="loginUser" class="denlu" type="button" value="登录">
+           <br>
+           <a href="#" class="zhuche">注册</a>
+           <p><input type="button" class="register" value="注册"></p>
+           </p>
+   </div>
+    <br/><br/>
+    <p class="chk">
+        <input type="checkbox" class="checkbox">同意<a href="https://st.music.163.com/official-terms/service">《服务条款》</a> </p>
 </div>
 <!-- page_search 搜索页 -->
 <div class="page_search R_page" id="pageSearch" style="display:none;">
@@ -423,3 +453,4 @@
 <script type="text/javascript" src="js/lyricScroll.js"></script>
 <script type="text/javascript" src="js/request.js"></script>
 <script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/register.js"></script>

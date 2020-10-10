@@ -29,7 +29,7 @@ function createJsonp(reqdata) {
 function requestAPI(req) {
     $.ajax({
         url: req.url,
-        type: req.method || "GET",
+        type: req.method || "get",
         data: req.data,
         dataType: "json",
         success: function (res) {
@@ -155,7 +155,6 @@ function createScrollLrc() {
                 'id': songID,
             },
             callback: function (data) {
-                debugger
                 console.log(data.nolyric);
                 // 判断是否有歌词
                 if (!data.nolyric) {
@@ -254,7 +253,6 @@ function initPlaylist(data) {
 
 // init
 $(function () {
-
     // 基本信息
     var Author = {
         "nickname": "前端2017--闯",
@@ -279,17 +277,17 @@ $(function () {
     // ===============初始化========================
 
     // 初始化歌单 我喜欢的音乐
-    showLoadingBox(true);
-    requestAPI({
-        url: "/api/playlist/detail/",
-        data: {
-            "id": Author["id_like"]
-        },
-        callback: function (data) {
-            initPlaylist(data);
-            showLoadingBox(false);
-        }
-    });
+    // showLoadingBox(false);
+    // requestAPI({
+    //     url: "http://localhost:3000/playlist/detail?",
+    //     data: {
+    //         "id": Author["id_like"]
+    //     },
+    //     callback: function (data) {
+    //         initPlaylist(data);
+    //         showLoadingBox(false);
+    //     }
+    // });
 
     // ===============搜索功能========================
 
@@ -339,6 +337,5 @@ $(function () {
 
     // export
     window.requestAPI = requestAPI;
-
 });
 

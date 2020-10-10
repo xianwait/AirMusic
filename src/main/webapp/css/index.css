@@ -61,7 +61,7 @@ table,td,th{
 .page_menu>div{
 	float:left;
     position:relative;
-    top:50%;left:0;
+    top:53%;left:0;
     -webkit-transform:translate(0,-50%);
     transform:translate(0,-50%);
 }
@@ -108,6 +108,28 @@ table,td,th{
 .menu_search>.search_btn>.fa{
 	font-size:0.7rem;
 	color:#ccc;
+}
+.menu_set{
+	display:inline-flex;
+	border:none;
+	outline:none;
+	padding:5px 30px 5px -1px;
+	border-radius:10px;
+}
+#menu_setdiv{
+	margin-left: 1150px;
+	align-content: center;
+	text-align: center;
+}
+#menu_setdiv label{
+	font-family: "Microsoft YaHei", serif;
+	color: #dbcfcf;
+	font-size: 16px;
+	margin: 4px 20px 0 10px;
+}
+#set{
+	color: #dbcfcf;
+	font-size: 37px;
 }
 /* ------------------------page_playerbar------------------------------- */
 .page_playerbar{
@@ -296,7 +318,7 @@ table,td,th{
 	transform:translate(0,-50%);
 }
 .list>.title>.title_btngroups>.btn{
-	margin:2px -4px;
+	margin:2px 0;
 }
 .list>.title>.title_btngroups>.btn>.fa{
 	font-size:18px;
@@ -385,7 +407,7 @@ table,td,th{
 }
 .playlist_smallwindow>.btngroups>.btn>.fa{
 	position:relative;
-	top:50%;left:25px;
+	top:50%;left:15px;
 	-webkit-transform:translate(0,-50%);
 	transform:translate(0,-50%);
 	font-size:0.8rem;
@@ -480,8 +502,8 @@ table,td,th{
 	border-bottom-right-radius:0;
 }
 .listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn.plus{
-	height: 43px;
-	margin-left:0;
+	height: 20px;
+	margin-left:-5px;
 	border-left:none;
 	border-top-left-radius:0;
 	border-bottom-left-radius:0;
@@ -491,7 +513,7 @@ table,td,th{
 }
 .listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn>.fa{
 	font-size:0.8rem;
-	margin-top: 7px;
+	margin-top: 4px;
 }
 .listcontainer>.listtab>.tabbtns{
 	padding:0 40px;
@@ -751,7 +773,7 @@ table,td,th{
 }
 .page_songdetail>.maincontainer>.lyricsection>.lrccontainer>.lrcbox>.lrc{
 	padding:10px 0;
-	color:#202016;
+	color: #e2e265;
 }
 .page_songdetail>.maincontainer>.lyricsection>.lrccontainer>.lrcbox>.lrc.current{
 	text-shadow:0 0 3px #333;
