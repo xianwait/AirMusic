@@ -9,7 +9,10 @@ body{
 	font-family: "Microsoft YaHei", serif;
 	background-color:#fafafa;
 	position:relative;
-	-moz-user-select:none; /* 禁止选中文字 */ 
+	-moz-user-select:none; /* 禁止选中文字 */
+}
+.btn{
+	align-items: baseline;
 }
 img{display:block;border-width:0;}
 a{text-decoration:none;color:#656567;}
@@ -61,7 +64,7 @@ table,td,th{
 .page_menu>div{
 	float:left;
     position:relative;
-    top:53%;left:0;
+    top:53%;left:-30px;
     -webkit-transform:translate(0,-50%);
     transform:translate(0,-50%);
 }
@@ -92,7 +95,7 @@ table,td,th{
 	display:inline-block;
 	border:none;
 	outline:none;
-	width:160px;
+	width:325px;
 	padding:5px 30px 5px 10px;
 	border-radius:10px;
 	background-color:rgba(0,0,0,0.5);
@@ -111,16 +114,18 @@ table,td,th{
 }
 .menu_set{
 	display:inline-flex;
-	border:none;
-	outline:none;
-	padding:5px 30px 5px -1px;
+	margin:5px 30px 5px 10px;
 	border-radius:10px;
+	font-size: 15px;
+	color: rgb(222, 216, 216);
 }
-#menu_setdiv{
-	margin-left: 1150px;
+#userMsg{
+	display: flex;
+	float: right;
 	align-content: center;
 	text-align: center;
 }
+
 #menu_setdiv label{
 	font-family: "Microsoft YaHei", serif;
 	color: #dbcfcf;
@@ -168,7 +173,7 @@ table,td,th{
 }
 .playerbar_playbtngroup>.btn>.fa{
 	position:relative;
-	top:50%;
+	top:30%;
 	-webkit-transform:translate(0,-50%);
 	transform:translate(0,-50%);
 	font-size:1rem;
@@ -249,7 +254,7 @@ table,td,th{
 .playerbar_timeprogress>.progress>.progress_curbar>.curbar_arc:hover{
 	box-shadow:0 0 5px rgba(0,0,0,0.3);
 }
-/* 音量小圆点的显示与隐藏 */ 
+/* 音量小圆点的显示与隐藏*/
 .volume>.progress>.progress_curbar>.curbar_arc{
 	visibility:hidden;
 }
@@ -291,12 +296,18 @@ table,td,th{
 .page_list{
 	position:absolute;
 	top:0;left:0;
-	width:220px;
+	width:285px;
 	height:100%;
 	padding:60px 0 120px 0;
 	border-right:1px solid #dadadc;
 	background-color:#f5f5f7;
 	box-sizing:border-box;
+	font-size: 20px;
+	overflow: hidden;
+	/* autoprefixer: off */
+	text-overflow: ellipsis;
+	/* autoprefixer: on */
+	white-space: nowrap;
 }
 .page_list>.list_container{
 	height:100%;
@@ -310,6 +321,7 @@ table,td,th{
 	line-height:2rem;
 	color:#8a8a8c;
 	position:relative;
+	margin-bottom: 7px;
 }
 .list>.title>.title_btngroups{
 	position:absolute;
@@ -325,11 +337,13 @@ table,td,th{
 	display: inline-block;
 }
 .list>.btngroups>.btn{
-	padding-left:20px;
-	line-height:2rem;
+	padding-left:25px;
+	line-height:35px;
 	border-left:3px solid transparent;
 	color:#656567;
 	cursor:pointer;
+	display: flex;
+	margin: 0;
 }
 .list>.btngroups>.btn:hover{
 	color:#111;
@@ -339,12 +353,13 @@ table,td,th{
 	border-left:8px solid #c52f30;
 	background-color:#e3e3e5;
 	color:#111;
+	z-index: 3;
 }
 .page_list>.playlist_smallwindow{
 	position:absolute;
 	bottom:60px;left:0;
-	width:220px;
-	height:60px;
+	width:285px;
+	height:80px;
 	border:1px solid #dadadc;
 	border-left:none;
 	box-sizing:border-box;
@@ -400,22 +415,24 @@ table,td,th{
 	height:100%;
 }
 .playlist_smallwindow>.btngroups>.btn{
-	height:50%;
+	height:36%;
 	margin-left: -26px;
 	text-align:center;
 	cursor:pointer;
+	display: flow-root;
 }
 .playlist_smallwindow>.btngroups>.btn>.fa{
 	position:relative;
-	top:50%;left:15px;
+	top:72%;left:15px;
 	-webkit-transform:translate(0,-50%);
 	transform:translate(0,-50%);
 	font-size:0.8rem;
+
 }
 
 /* ------------------------R_page page_right------------------------------- */
 .R_page{
-	padding:60px 0 60px 220px;
+	padding:60px 0 60px 281px;
 	height:100%;
 	box-sizing:border-box;
 }
@@ -502,7 +519,7 @@ table,td,th{
 	border-bottom-right-radius:0;
 }
 .listcontainer>.listinfo>.info_detailtext>.detail_btns>.btn.plus{
-	height: 20px;
+	height: 42px;
 	margin-left:-5px;
 	border-left:none;
 	border-top-left-radius:0;
@@ -773,7 +790,7 @@ table,td,th{
 }
 .page_songdetail>.maincontainer>.lyricsection>.lrccontainer>.lrcbox>.lrc{
 	padding:10px 0;
-	color: #e2e265;
+	color: #040202eb;
 }
 .page_songdetail>.maincontainer>.lyricsection>.lrccontainer>.lrcbox>.lrc.current{
 	text-shadow:0 0 3px #333;
@@ -813,7 +830,7 @@ table,td,th{
 }
 .page_songdetail>.maincontainer>.discsection>.disc_btns{
 	position:absolute;
-	bottom:0;left:0;
+	bottom:0;left:-60px;
 	width:100%;
 }
 .page_songdetail>.maincontainer>.discsection>.disc_btns>.btn{
@@ -902,7 +919,7 @@ table,td,th{
 
 	background-repeat:no-repeat;
 	background-position:center 0;
-	background-size:60% 60%;
+	background-size: 25% 40%;
 	-webkit-filter:blur(100px);
 	filter:blur(100px);
 	z-index:-1;

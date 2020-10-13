@@ -84,7 +84,6 @@ function audioError(audio) {
 }
 
 $(function () {
-
 	// 设置基本信息
 	var curPlayLine = 0, // 当前播放曲目序号
 		isDrag = false, // 是否允许拖动进度条

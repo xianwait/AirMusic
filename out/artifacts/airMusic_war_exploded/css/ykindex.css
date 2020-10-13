@@ -1,4 +1,4 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
@@ -79,19 +79,212 @@ ul {
 	line-height: 24px;
 	white-space: nowrap;
 	width: 100%;
-	display: block;
+	display: inline-block;
 	font-size: 19px;
 	padding: 8px 30px 0;
 }
 
-#menu ul li:hover {
-	background: #E6EDF6;
-	border: 1px solid #B4D2F6;
+#menu a {
+	text-decoration: none;
 }
 
-.skin {
-	width: 100px;
-	padding: 2px;
-	visibility: hidden;
+.contextmenu {
+	display: none;
 	position: absolute;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	border-radius: 5px;
+	list-style: none;
+	box-shadow: 0 15px 35px rgba(50, 50, 90, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+	overflow: hidden;
+	z-index: 999999;
+}
+
+.contextmenu li {
+	border-left: 3px solid transparent;
+	transition: ease .2s;
+	color: #202016;
+}
+
+.contextmenu li a {
+	display: block;
+	padding: 10px;
+	color: #B0BEC5;
+	text-decoration: none;
+	transition: ease .2s;
+}
+
+.contextmenu li:hover {
+	background: #d82733;
+	border-left: 3px solid #9C27B0;
+}
+
+.contextmenu li:hover a {
+	color: #FFFFFF;
+}
+
+#more {
+	display: inline-block;
+	float: right;
+	margin-top: 6px;
+}
+
+#recommend {
+	display: inline-block;
+
+}
+
+#more a {
+	text-decoration: none;
+}
+
+#reSongList {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+#reSongList hr {
+	margin-top: 0rem;
+}
+
+.u-cover {
+	position: relative;
+	display: block;
+}
+
+.u-cover-1 {
+	width: 140px;
+	height: 140px;
+}
+
+.m-cvrlst li {
+	width: 290px;
+	height: 273px;
+	padding-left: 42px;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	padding: 0 0 30px 50px;
+	line-height: 1.4;
+}
+
+.u-cover .icon-play:hover {
+	background-position: 0 -60px;
+}
+
+.u-cover .icon-play {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	width: 16px;
+	height: 17px;
+	display: inline-block;
+}
+
+.u-cover .bottom {
+	position: absolute;
+	bottom: 279px;
+	left: 57px;
+	width: 100%;
+	height: 27px;
+	background-position: 0 -537px;
+	color: #ccc;
+}
+
+.u-cover .icon-play {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	width: 16px;
+	height: 17px;
+	background-position: 0 0;
+}
+
+.u-cover .icon-headset {
+	float: left;
+	width: 14px;
+	height: 11px;
+	background-position: 0 -24px;
+	margin: 9px 5px 9px 10px;
+}
+
+.u-cover .nb {
+	float: left;
+	margin: 36px 0px 0 -27px;
+}
+
+.m-cvrlst li .tit {
+	display: inline-block;
+	max-width: 182px;
+	_width: 100%;
+	vertical-align: middle;
+}
+
+.s-fc0,
+a.s-fc0:hover {
+	color: #000;
+}
+
+.m-cvrlst {
+	margin: 20px 0 0 -50px;
+}
+
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+
+#homepag {
+	max-width: 1200px;
+}
+
+#homepag .nav-link {
+	display: block;
+	padding: 0.5rem 59.5px;
+}
+
+#homepag #navigation {
+	width: 1110px;
+	margin-left: 29px;
+}
+
+#FoundThatMusic {
+	overflow-y: auto;
+	z-index: 34;
+}
+
+.carousel-inner .carousel-item {
+	width: 1080px;
+	height: 420px;
+	text-align: -webkit-center;
+	margin-bottom: -10px;
+}
+.u-cover img {
+	width: 230px;
+	height: 230px;
+	margin-top: -15px;
+}
+
+.theSecond {
+	position: relative;
+	left: 64px;
+}
+
+li .dec {
+}
+
+.theThird {
+	position: relative;
+	left: 46px;
+}
+
+.twoLi {
+	position: relative;
+	left: 24px;
+}
+
+.nav-item .nav-link {
+	color: black;
 }

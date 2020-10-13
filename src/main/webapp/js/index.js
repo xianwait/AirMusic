@@ -144,7 +144,6 @@ $(function () {
 		$(this).css("color","#ded8d8");
 	});
 
-
 	// ==========================EXPORT============================
 
 	// export 
@@ -155,3 +154,11 @@ $(function () {
 	window.formatTime=formatTime;
 	window.formatDate=formatDate;
 });
+/*wqx编码*/
+$(function () {
+	$('#discovrMusic').addClass('active');
+	$('#ckPlaylist').click(function () {
+
+		$(this).find('span').attr("data-type");
+	})
+})
